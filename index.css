@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    /* Beautiful Sky Gradient */
+    background: linear-gradient(180deg, #4facfe 0%, #00f2fe 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto; /* Proper scrolling */
+}
+
+.container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 40px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.8s ease-out;
+}
+
+header h1 {
+    font-size: 0.8rem;
+    text-align: center;
+    letter-spacing: 5px;
+    color: #4facfe;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* --- Search Bar --- */
+.search {
+    background: #f1f5f9;
+    padding: 15px 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.search:focus-within {
+    border-color: #4facfe;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(79, 172, 254, 0.1);
+}
+
+.search i {
+    color: #4facfe;
+    margin-right: 12px;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 1rem;
+    color: #334155;
+}
+
+/* --- Main Weather Section --- */
+.Wth_main {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.Weather_place {
+    font-size: 2.2rem;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+.Weather_time {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.weather_icon {
+    font-size: 4.5rem;
+    display: block;
+    margin: 15px 0;
+    /* This makes the icon look colorful and clear */
+    background: linear-gradient(to bottom, #ff930f, #ffcc33);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 5px 10px rgba(255, 147, 15, 0.3));
+}
+
+.weather_temp {
+    font-size: 4.5rem;
+    font-weight: 600;
+    color: #1e293b;
+    line-height: 1;
+}
+
+.mintemp, .maxtemp {
+    display: inline-block;
+    font-size: 1rem;
+    color: #64748b;
+    margin: 10px 8px;
+    background: #f8fafc;
+    padding: 5px 15px;
+    border-radius: 50px;
+}
+
+/* --- Bottom Stats Grid --- */
+.weather_more {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.weather_more div {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 25px;
+    text-align: center;
+    color: #334155;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect: Turns the card blue and makes it pop */
+.weather_more div:hover {
+    transform: translateY(-5px);
+    background: #4facfe;
+    color: white;
+    border-color: #4facfe;
+    box-shadow: 0 10px 20px rgba(79, 172, 254, 0.3);
+}
+
+.weather_more div i {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #0ea5e9;
+    transition: 0.3s;
+}
+
+.weather_more div:hover i {
+    color: white;
+}
+
+/* --- Smooth Animations --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.5);
+    border-radius: 10px;
+}
